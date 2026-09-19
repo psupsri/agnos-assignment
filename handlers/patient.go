@@ -67,7 +67,7 @@ func (h PatientHandler) SearchPatient(ctx *gin.Context) {
 }
 
 func (h PatientHandler) CreatePatient(ctx *gin.Context) {
-	var req models.CreatePatient
+	var req models.CreatePatientRequest
 	if err := ctx.ShouldBindJSON(&req); err != nil {
 		utils.ErrorResponse(ctx, http.StatusBadRequest, err.Error())
 		return

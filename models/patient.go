@@ -33,7 +33,7 @@ type GetPatientQuery struct {
 	Email       string     `form:"email"`
 }
 
-type CreatePatient struct {
+type CreatePatientRequest struct {
 	PatientHN    string     `json:"patient_hn" binding:"required"`
 	NationalID   *string    `json:"national_id"`
 	PassportID   *string    `json:"passport_id"`
