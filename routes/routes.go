@@ -19,7 +19,8 @@ func SetUpRouter(db *gorm.DB) *gin.Engine {
 
 	r.GET("/health", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
-			"status": "ok",
+			"status":  "ok",
+			"message": "ready",
 		})
 	})
 
